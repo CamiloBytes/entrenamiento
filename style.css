@@ -4,6 +4,7 @@
     box-sizing: 0;
 }
 
+/* I style the header */
 header{
     display: grid;
     grid-template-columns: 2fr 8fr 2fr;
@@ -22,7 +23,7 @@ header{
     object-fit: cover;
     padding: 20px;
 }
-
+/* I style everything in the nav */
 nav{
     display: flex;
     justify-content: center;
@@ -235,8 +236,18 @@ main{
     padding: 20px;
 }
 
+.form-bar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+form-bar input{
+    margin: 5px;
+}
+
 .form-bar .contact-bar{
-    border: 2px solid #000;
     background-color: transparent;
     border-radius: 20px;
     font-size: 20px;
@@ -247,7 +258,6 @@ main{
 
 .form-bar .contact-bar-opinion{
     height: 100px;
-    border: 1px solid #000;
     background-color:transparent;
     border-radius: 20px;
     font-size: 20px;
@@ -258,12 +268,99 @@ main{
 input::placeholder{
         font-size: 12px;
         color: #000;
-    }
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 2fr 8fr 2fr;
+    grid-template-rows: 100px;
+    color: white;
+    background-color: #000;
+}
+
+.logo-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo-footer img{
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 140px;
+}
+footer ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    gap: 20px;
+}
+
+.social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.social p{
+    padding: 10px;
+}
+.column{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.column ul{
+    gap: 20px;
+}
+.networks-footer{
+    padding-bottom: 10px;
+}
+
+footer i{
+    color: #ffffff;
+}
 
 @media (max-width: 768px){
+    .logo img{
+        width: 190px;
+    
+    }
+    nav ul {
+        gap: 50px;
+        flex-direction: row;
+    }
+
+    .carousel {
+        min-width: 180px;
+        margin-right: 8px;
+    }
+
     .carousel img{
         max-width: 768px;
     }
+
+    footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo-footer{
+        padding-left: 12px;
+    }
+    
+    .logo-footer img{
+        padding: 0px
+    }
+    .column{
+        padding-right: 12px;
+    }
+
 }
 
 @media (max-width: 480px){
@@ -330,5 +427,76 @@ input::placeholder{
     .details,
     .price {
         font-size: 14px;
+    }
+
+    .information{
+        max-width: 400px;
+        padding: 10px 5px;
+        margin: 10px;
+        line-height: 1;
+        font-size: 15px;
+    }
+
+    .form-bar{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+        
+    }
+    .form-bar input{
+        margin: 5px;
+    }
+    
+    .form-bar .contact-bar{
+        border: 2px solid #000;
+        background-color: transparent;
+        border-radius: 20px;
+        font-size: 20px;
+        width: 100%;
+        gap: 20px;
+        outline:#000;
+    }
+    
+    .form-bar .contact-bar-opinion{
+        height: 90px;
+        font-size: 10px;
+
+    }
+    input::placeholder{
+            font-size: 12px;
+            color: #000;
+    }
+
+    footer{
+        grid-template-columns: 2fr 7fr 3fr;
+    }
+    footer p{
+        font-size: 9px;
+    }
+    footer i{
+        width: 8px;
+    }
+
+    .logo-footer img{
+        justify-content: start;
+        width: 70px;
+    }
+
+
+    .social{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .column {
+        justify-content: center;
+        align-items: center;
+    }
+    .column ul{
+        gap: 10px;
     }
 }
